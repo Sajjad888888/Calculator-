@@ -1,0 +1,123 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Calculator container */
+.calculator {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+}
+
+/* Display section */
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+/* Button styles */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Default button styling for numbers */
+.btn {
+    background-color: #555;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button styles for operators (orange color) */
+.btn.operator {
+    background-color: #f57c00;  /* Orange background */
+    color: white;
+}
+
+.btn.operator:hover {
+    background-color: #ff8f00;
+}
+
+.btn.operator:active {
+    background-color: #e65100;
+}
+
+/* Button hover and active states */
+.btn:hover {
+    background-color: #666;
+}
+
+.btn:active {
+    background-color: #444;
+}
+
+/* History Section */
+.history {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #444;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.history h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history li {
+    padding: 5px;
+    font-size: 16px;
+    color: #fff;
+    border-bottom: 1px solid #555;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #display {
+        font-size: 20px;
+        height: 45px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 18px;
+    }
+}
